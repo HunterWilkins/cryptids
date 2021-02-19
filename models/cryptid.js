@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
         },
 
         body: {
-            type: DataTypes.STRING
+            type: DataTypes.TEXT
         },
 
         threat: {
@@ -29,8 +29,10 @@ module.exports = function(sequelize, DataTypes) {
         weight: {
             type: DataTypes.INTEGER
         },
-
-        type: {
+        magicType: {
+            type: DataTypes.STRING
+        },
+        bodyType: {
             type: DataTypes.STRING
         }
     });
