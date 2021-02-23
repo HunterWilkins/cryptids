@@ -5,6 +5,8 @@ import "./reset.css";
 import "./style.css";
 import Main from "./pages/Main";
 import Entry from "./pages/Entry";
+import Database from "./pages/Database";
+import Nav from "./components/Nav";
 
 function App() {
 
@@ -14,18 +16,13 @@ function App() {
     <div>
 
     <Router>
-    <nav>
-        <h2>Cryptids</h2>
-        <Link to="/faq">FAQ</Link>
-        <Link to="/top">Top Cryptids</Link>
-  
-        <Link to="/database">Database</Link>
-    </nav>
     <Main>
+    <Nav />
+
         <Switch>
         <Route exact path = "/faq" component = {Entry}/>
-        <Route exact path = "/top" component = {Entry}/>
-        <Route exact path = "/database" component = {Entry}/>
+        <Route exact path = "/cryptid/:name" component = {Entry}/>
+        <Route exact path = "/database" component = {Database}/>
         <Route exact path = "/" component = {Entry}/>
 
         </Switch>

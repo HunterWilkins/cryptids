@@ -24,9 +24,13 @@ hr {
 }
 
 :root {
-    --layer0: rgb(0, 0, 0);
-    --layer1: rgb(29, 7, 10);
+    --layer0: rgb(48, 21, 21);
+    --layer1: var(--super-dark);
     --layer2: rgb(65,65,65);
+
+    --light-paper: rgb(211, 184, 149);
+    --dark-paper: rgb(199, 141, 103);
+    --super-dark: rgb(48,21,21);
 
     --text-color: white;
 }
@@ -54,65 +58,11 @@ main {
     background: var(--layer1);
 }
 
-#entry {
-    display: flex;
-    flex: 1;
-}
-
-nav {
-    width: 100%;
-    border-bottom: red solid 8px;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-article {
-    font-family: 'Neucha', cursive;
-    font-weight: bolder;
-    color: black;
-    background: linear-gradient(to right, rgb(211, 184, 149) 0%, rgb(211, 184, 149) 80%, rgb(199, 141, 103) 100%);
-    margin-right: 5px;
-}
-
-article, aside {
-    /* background: var(--layer1); */
-    color: black;
-    flex: 1;
-    padding: 5px;
-}
-
-aside {
-    background: linear-gradient(to right, rgb(199, 141, 103) 0%, rgb(211, 184, 149) 20%, rgb(211, 184, 149) 100%);
-}
-
-#cryptid-portrait {
-    position: sticky;
-    top: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
-#cryptid {
-    border-radius: 15px;
-    max-width: 80%;
-    max-height: 300px;
-}
-
 footer {
-    padding: 15px;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.icons {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 800px) {

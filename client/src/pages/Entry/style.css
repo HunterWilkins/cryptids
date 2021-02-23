@@ -1,0 +1,63 @@
+#entry {
+    display: flex;
+    flex: 1;
+}
+
+article {
+    font-family: 'Neucha', cursive;
+    font-weight: bolder;
+    color: black;
+    background: linear-gradient(to right, rgb(211, 184, 149) 0%, rgb(211, 184, 149) 80%, rgb(199, 141, 103) 100%);
+    margin-right: 5px;
+}
+
+article, aside {
+    /* background: var(--layer1); */
+    color: black;
+    flex: 1;
+    padding: 5px;
+}
+
+aside {
+    background: linear-gradient(to right, rgb(199, 141, 103) 0%, rgb(211, 184, 149) 20%, rgb(211, 184, 149) 100%);
+}
+
+#cryptid-portrait {
+    position: sticky;
+    top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#cryptid {
+    border-radius: 15px;
+    max-width: 80%;
+    max-height: 300px;
+}
+
+.icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#bar-box {
+    height: 30px;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#bar-box img {
+    max-width: 30px;
+}
+
+#threat-bar {
+    height: 10px;
+    width: 80%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+}

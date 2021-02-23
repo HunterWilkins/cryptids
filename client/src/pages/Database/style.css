@@ -1,0 +1,89 @@
+@keyframes switchImage {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#database {
+    flex: 1;
+    background: var(--light-paper);
+    color: black;
+    font-weight: bolder;
+    display: flex;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+#cryptid-img {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: var(--dark-paper);
+}
+
+#cryptid-img figure img {
+    max-width: 100%;
+    border: white solid 6px;
+    border-radius: 6px;
+    box-shadow: 5px 5px 10px var(--super-dark);
+    /* animation: switchImage 1s; */
+}
+
+#cryptid-img figure {
+    flex: 1;
+}
+
+#results {
+    flex: 1;
+}
+
+.db-cryptid {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
+
+.db-cryptid > * {
+    flex: 1;
+}
+
+.db-cryptid:nth-child(2n) {
+    background: var(--dark-paper);
+}
+
+#tools {
+    width: 100%;
+    height: 30px;
+}
+
+#tools img {
+    max-height: 100%;
+}
+
+#pages {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#pages img {
+    cursor: pointer;
+    width: 30px;
+}
+
+#pages :first-child {
+    transform: scaleX(-1);
+}

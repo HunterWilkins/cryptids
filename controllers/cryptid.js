@@ -2,14 +2,20 @@ const db = require("../models");
 const express = require("express");
 const router = express.Router();
 
-router.get("/:name", (req, res) => {
+router.get("/entry/:id", (req, res) => {
     db.Cryptid.findOne({
         where: {
-            name: req.params.name
+            id: req.params.id
         }
     }).then(dbCryptid => {
         res.json(dbCryptid);
     })
 });
+
+router.get("/database", (req, res) => {
+    db.Cryptid.findAll().then(dbCryptids => {
+        res.json(dbCryptids);
+    });
+})
 
 module.exports = router;
