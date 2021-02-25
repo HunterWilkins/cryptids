@@ -10,6 +10,7 @@ function Database() {
     const [image, setImage] = useState("");
     const [pageMax, setPageMax] = useState(0);
     const [page, setPage] = useState(0);
+    const [isModalActive, setIsModalActive] = useState(false);
 
     useEffect(() => {
         API.getDatabase().then(({data}) => {
@@ -20,7 +21,12 @@ function Database() {
 
     return(
         <div id = "database">
-            <CreateModal />
+            {
+                isModalActive ?
+                <CreateModal closeModal = {() => {setIsModalActive(false)}}/>
+                :
+                ""
+            }
             <section id = "list">
                 <figure className = "db-cryptid">
                     <p>Name</p>
@@ -56,7 +62,7 @@ function Database() {
             </section>
             <section id = "cryptid-img">
                 <span id = "tools">
-                    <img id = "pencil" src = "/assets/images/pencil.png" />
+                    <img onClick = {() => {setIsModalActive(true)}} id = "pencil" src = "/assets/images/pencil.png" />
                 </span>
                 <figure>
                 {

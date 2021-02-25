@@ -84,6 +84,10 @@
     width: 30px;
 }
 
+#pencil {
+    cursor: pointer;
+}
+
 #pages :first-child {
     transform: scaleX(-1);
 }

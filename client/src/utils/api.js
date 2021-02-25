@@ -7,6 +7,10 @@ const API = {
 
     getDatabase: function() {
         return axios.get("/api/cryptid/database");
+    },
+
+    postCryptid: function(content) {
+        return axios.post("/api/cryptid", content);
     }
 }
 

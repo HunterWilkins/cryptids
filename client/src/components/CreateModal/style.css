@@ -41,7 +41,14 @@
     display: flex;
 }
 
-.flexrow > * {
+.flexrow > input {
     flex: 1;
 }
 
+#close-modal {
+    align-self: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: var(--dark-paper) solid 4px;
+}

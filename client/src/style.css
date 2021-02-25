@@ -18,6 +18,10 @@ h3 {
     font-size: 22px;
 }
 
+button, input[type=submit] {
+    cursor: pointer;
+}
+
 p {
     font-size: 18px;
 }

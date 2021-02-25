@@ -18,7 +18,6 @@ function App() {
     <Router>
     <Main>
     <Nav />
-
         <Switch>
         <Route exact path = "/faq" component = {Entry}/>
         <Route exact path = "/cryptid/:name" component = {Entry}/>
