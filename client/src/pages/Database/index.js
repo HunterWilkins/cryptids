@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import API from "../../utils/api";
+import CreateModal from "../../components/CreateModal";
 import "./style.css";
 
 function Database() {
@@ -19,7 +20,7 @@ function Database() {
 
     return(
         <div id = "database">
-            
+            <CreateModal />
             <section id = "list">
                 <figure className = "db-cryptid">
                     <p>Name</p>

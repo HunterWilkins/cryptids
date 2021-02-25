@@ -1,0 +1,47 @@
+#create-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#create-modal form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+
+    background: var(--super-dark);
+    padding: 15px;
+}
+
+#create-modal form input, #create-modal form textarea {
+   margin: 5px 0; 
+   padding: 5px;
+   background: var(--light-paper);
+   font-family: inherit;
+   font-size: 18px;
+}
+
+#create-modal form textarea {
+    resize: vertical;
+}
+
+#create-modal form input::placeholder, #create-modal form textarea::placeholder {
+    color: black;
+    font-style: italic;
+}
+
+.flexrow {
+    display: flex;
+}
+
+.flexrow > * {
+    flex: 1;
+}
+
