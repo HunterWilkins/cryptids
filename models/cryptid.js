@@ -37,5 +37,14 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
+    Cryptid.associate = (models) => {
+        Cryptid.belongsTo(models.User, {
+            foreignKey: {
+                allowNull: false
+            },
+            onDelete: "CASCADE"
+        })
+    }
+
     return Cryptid;
 }

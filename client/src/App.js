@@ -7,10 +7,11 @@ import Main from "./pages/Main";
 import Entry from "./pages/Entry";
 import Database from "./pages/Database";
 import Nav from "./components/Nav";
+import LoginModal from "./components/LoginModal";
 
 function App() {
 
-
+  const [isLoginVisible, setIsLoginVisible] = useState(true);
 
   return (
     <div>
@@ -25,6 +26,13 @@ function App() {
         <Route exact path = "/" component = {Entry}/>
 
         </Switch>
+
+        {
+          isLoginVisible ? 
+          <LoginModal setIsLoginVisible = {setIsLoginVisible}/>
+          :
+          ""
+        }
     </Main>
     
     <footer>Copyright 2021</footer>
