@@ -18,7 +18,7 @@ function App() {
 
     <Router>
     <Main>
-    <Nav />
+    <Nav setIsLoginVisible = {setIsLoginVisible}/>
         <Switch>
         <Route exact path = "/faq" component = {Entry}/>
         <Route exact path = "/cryptid/:name" component = {Entry}/>

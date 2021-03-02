@@ -11,6 +11,14 @@ const API = {
 
     postCryptid: function(content) {
         return axios.post("/api/cryptid", content);
+    },
+
+    login: function(body) {
+        return axios.post("/api/users/login", body);
+    },
+    
+    signup: function(body) {
+        return axios.post("/api/users/signup", body);
     }
 }
 

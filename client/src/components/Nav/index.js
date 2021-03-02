@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 import {useState, useEffect} from "react";
 import "./style.css";
 
-function Nav() {
+function Nav(props) {
 
     const [page, setPage] = useState("");
 
@@ -13,7 +13,10 @@ function Nav() {
 
     return (
         <nav>
-        <h2>Cryptids</h2>
+        <span id = "logo">
+            <h2>Cryptids</h2>
+            <button onClick = {() => props.setIsLoginVisible(true)}>Account</button>
+        </span>
         <Link onClick = {() => setPage("faq")} className = {page === "faq" ? "active" : ""} to="/faq">FAQ</Link>
         <Link onClick = {() => setPage("top")} className = {page === "top" ? "active" : ""} to="/top">Top Cryptids</Link> 
         <Link onClick = {() => setPage("database")} to="/database" className = {page === "database" ? "active" : ""}>Database</Link>

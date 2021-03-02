@@ -7,8 +7,18 @@ nav {
     justify-content: space-evenly;
 }
 
-nav h2 {
+nav #logo {
     flex: 4;
+    display: flex;
+}
+
+#logo button {
+    margin-left: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border: none;
+    padding: 5px 15px;
+    font-weight: bolder;
 }
 
 nav > a {

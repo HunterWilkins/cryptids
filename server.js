@@ -16,6 +16,7 @@ if (process.env.NODE_ENV === "production") {
 };
 
 app.use("/api/cryptid/", controllers.cryptid);
+app.use("/api/users/", controllers.user);
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "/client/build", "index.html"));
