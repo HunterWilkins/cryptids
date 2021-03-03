@@ -19,7 +19,9 @@ router.get("/database", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    db.Cryptid.create(req.body).then(dbCryptid => {res.json(dbCryptid);})
+    console.log(req.session);
+    db.Cryptid.create({...req.body, UserId: req.session.user.id})
+    .then(dbCryptid => {res.json(dbCryptid);})
 });
 
 router.put("/:id", (req, res) => {
