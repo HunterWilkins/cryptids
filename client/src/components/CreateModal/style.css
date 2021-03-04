@@ -39,16 +39,28 @@
 
 .flexrow {
     display: flex;
+    align-items: center;
 }
 
 .flexrow > input {
     flex: 1;
 }
 
-#close-modal {
+label {
+    color: white;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+#close-create {
     align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 30px;
     width: 30px;
     border-radius: 50%;
+    border-top-left-radius: 0;
+    background: var(--light-paper);
     border: var(--dark-paper) solid 4px;
 }

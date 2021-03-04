@@ -13,6 +13,10 @@ const API = {
         return axios.post("/api/cryptid", content);
     },
 
+    updateCryptid: function(content) {
+        return axios.put("/api/cryptid", content);
+    },
+
     login: function(body) {
         return axios.post("/api/users/login", body);
     },

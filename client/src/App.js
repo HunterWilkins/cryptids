@@ -11,7 +11,7 @@ import LoginModal from "./components/LoginModal";
 
 function App() {
 
-  const [isLoginVisible, setIsLoginVisible] = useState(true);
+  const [isLoginVisible, setIsLoginVisible] = useState(false);
 
   return (
     <div>

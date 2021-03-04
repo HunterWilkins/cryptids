@@ -32,20 +32,22 @@ function LoginModal(props) {
     return(
         <div id = "login-modal">
             <form onChange = {handleInputChange}>
-                <span className = "flexrow">
-                    <button onClick = {() => props.setIsLoginVisible()}>x</button>
-                    <input name = "email" type = "email" placeholder = "Email@email.com"/>
-                    {
-                        isSignup ? 
-                        <input name = "username" type = "text" placeholder = "Username"/>
-                        :
-                        ""
-                    }
-                    <button onClick = {(event) => {event.preventDefault(); setIsSignup(!isSignup)}}>{isSignup ? "Login?" : "Signup?"}</button>
-                </span>
+                <input name = "email" type = "email" placeholder = "Email@email.com"/>
+                {
+                    isSignup ? 
+                    <input name = "username" type = "text" placeholder = "Username"/>
+                    :
+                    ""
+                }
                 
                 <input name = "password" type = "password" placeholder = "Password"/>
-                <input type = "submit" onClick = {isSignup ? (event) => {signup(event)} : (event) => {login(event)}} /> 
+                <span className = "flexrow">
+                    <button onClick = {isSignup ? (event) => {signup(event)} : (event) => {login(event)}}>Submit</button> 
+                    <div id = "login-close" onClick = {() => props.setIsLoginVisible()}>
+                        <p>x</p>
+                    </div>
+                    <button id = "toggle-signup" onClick = {(event) => {event.preventDefault(); setIsSignup(!isSignup)}}>{isSignup ? "Login?" : "Signup?"}</button>
+                </span>
             </form>
         </div>
     )

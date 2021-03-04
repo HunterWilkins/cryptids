@@ -6,7 +6,11 @@ router.get("/entry/:id", (req, res) => {
     db.Cryptid.findOne({
         where: {
             id: req.params.id
-        }
+        },
+        include: [{
+            model: db.User,
+            attributes: ["username"]
+        }]
     }).then(dbCryptid => {
         res.json(dbCryptid);
     })
@@ -32,10 +36,8 @@ router.put("/:id", (req, res) => {
         }
     }).then(dbCryptid => {
         console.log(req.body.field, req.body.value);
-        dbCryptid.update({
-            [req.body.field] : req.body.value
-        }).then(updatedCryptid => res.json(updatedCryptid));
-    })
+        dbCryptid.update(req.body).then(updatedCryptid => res.json(updatedCryptid));
+    });
 })
 
 module.exports = router;

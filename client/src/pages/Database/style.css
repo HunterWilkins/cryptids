@@ -54,6 +54,11 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 5px;
+    font-weight: normal;
+}
+
+#results .db-cryptid:hover {
+    font-weight: bolder;
 }
 
 .db-cryptid > * {

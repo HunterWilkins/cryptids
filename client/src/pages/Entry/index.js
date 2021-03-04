@@ -5,11 +5,16 @@ import "./style.css";
 
 function Entry() {
 
-    const [cryptid, setCryptid] = useState({});
+    const [cryptid, setCryptid] = useState({
+        User: {
+            username: ""
+        }
+    });
 
     useEffect(() => {
         API.getCryptid(window.location.pathname.split("/")[2]).then(response => {
-           setCryptid({
+            console.log(response.data);
+            setCryptid({
                ...response.data,
                threatPercent: (response.data.threat / 5) * 100
             });
@@ -35,6 +40,7 @@ function Entry() {
         <div id="entry">
             <article>
                 <h2 id = "monster-name">{cryptid.name}</h2>
+                <h3>{cryptid.User.username ? "Zoologist: " + cryptid.User.username : ""}</h3>
                 <div>
                     {
                     cryptid.body !== undefined ?
