@@ -12,13 +12,15 @@ nav #logo {
     display: flex;
 }
 
-#logo button {
+#account-btn {
     margin-left: 15px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     border: none;
     padding: 5px 15px;
     font-weight: bolder;
+    background: rgb(230,230,230);
+    color: black;
 }
 
 nav > a {

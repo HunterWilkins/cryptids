@@ -23,6 +23,14 @@ const API = {
     
     signup: function(body) {
         return axios.post("/api/users/signup", body);
+    },
+
+    checkUser: function() {
+        return axios.get("/api/users/check");
+    },
+
+    logout: function() {
+        return axios.get("/api/users/logout");
     }
 }
 

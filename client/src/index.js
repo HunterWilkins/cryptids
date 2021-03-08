@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import {GlobalContextProvider} from "./utils/GlobalContext";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalContextProvider>
     <App />
+    </GlobalContextProvider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

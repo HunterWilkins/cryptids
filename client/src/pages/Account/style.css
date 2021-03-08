@@ -1,0 +1,8 @@
+#account {
+    background: var(--light-paper);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: black;
+    padding: 10px;
+}

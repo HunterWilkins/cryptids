@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import {useGlobalContext} from "../../utils/GlobalContext";
 import API from "../../utils/api";
 import "./style.css";
 
@@ -6,6 +7,7 @@ function LoginModal(props) {
 
     const [isSignup, setIsSignup] = useState(true);
     const [userInfo, setUserInfo] = useState({});
+    const [loginState, dispatch] = useGlobalContext();
 
     function handleInputChange(event) {
         setUserInfo({
@@ -18,6 +20,10 @@ function LoginModal(props) {
         event.preventDefault();
         API.login({email: userInfo.email, password: userInfo.password}).then(response => {
             console.log(response.data);
+            dispatch({type: "login", data: {
+                username: response.data.username,
+                email: response.data.email
+            }})
         }).catch(err => console.log(err));
     }
 
