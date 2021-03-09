@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import {useState, useEffect} from "react";
 import {GlobalContextProvider, useGlobalContext} from "./utils/GlobalContext";
-import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Redirect, Link, Route, Switch} from "react-router-dom";
 import "./reset.css";
 import "./style.css";
 import Main from "./pages/Main";
@@ -52,13 +52,14 @@ function App() {
         <Route exact path = "/faq" component = {Entry}/>
         <Route exact path = "/cryptid/:name" component = {Entry}/>
         <Route exact path = "/database" component = {Database}/>
-        {loginState ? 
-          <Route exact path = "/account">
-            <Account userInfo = {user} />
-          </Route>
+        <Route exact path = "/account">
+        {loginState.loggedIn ? 
+            <Account userInfo = {loginState} />          
           :
-          ""
+          <Redirect to = "/" />
         }
+        </Route>
+        
         <Route exact path = "/" component = {Entry}/>
 
         </Switch>

@@ -1,11 +1,12 @@
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import {useGlobalContext} from "../../utils/GlobalContext";
 import API from "../../utils/api";
 import CreateModal from "../../components/CreateModal";
 import "./style.css";
 
 function Database() {
-
+    const [loginState, dispatch] = useGlobalContext();
     const [cryptids, setCryptids] = useState([{}]);
     const [image, setImage] = useState("");
     const [pageMax, setPageMax] = useState(0);
@@ -62,7 +63,12 @@ function Database() {
             </section>
             <section id = "cryptid-img">
                 <span id = "tools">
-                    <img onClick = {() => {setIsModalActive(true)}} id = "pencil" src = "/assets/images/pencil.png" />
+                    {
+                        loginState.loggedIn ?
+                        <img onClick = {() => {setIsModalActive(true)}} id = "pencil" src = "/assets/images/pencil.png" />
+                        :
+                        ""
+                    }
                 </span>
                 <figure>
                 {

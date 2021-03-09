@@ -18,7 +18,7 @@ function Nav(props) {
         <span id = "logo">
             <h2>Cryptids</h2>
             {
-                loginState ? 
+                loginState.loggedIn ? 
                 <Link id = "account-btn" onClick = {() => setPage("account")} to = "/account" className = {page === "account" ? "active" : ""}>Account</Link>
                 :
                 <button id = "account-btn" onClick = {() => props.setIsLoginVisible(true)}>Account</button>

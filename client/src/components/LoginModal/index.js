@@ -23,7 +23,9 @@ function LoginModal(props) {
             dispatch({type: "login", data: {
                 username: response.data.username,
                 email: response.data.email
-            }})
+            }});
+            props.setIsLoginVisible();
+
         }).catch(err => console.log(err));
     }
 
@@ -31,7 +33,7 @@ function LoginModal(props) {
         event.preventDefault();
 
         API.signup(userInfo).then(response => {
-            console.log(response.data);
+            props.setIsLoginVisible();
         }).catch(err => console.log(err));
     }
 

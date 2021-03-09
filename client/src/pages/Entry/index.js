@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import {useGlobalContext} from "../../utils/GlobalContext";
 import API from "../../utils/api";
 
 import "./style.css";
@@ -10,6 +11,8 @@ function Entry() {
             username: ""
         }
     });
+
+    const [loginState, dispatch] = useGlobalContext();
 
     useEffect(() => {
         API.getCryptid(window.location.pathname.split("/")[2]).then(response => {

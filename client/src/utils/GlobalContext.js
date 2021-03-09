@@ -18,13 +18,23 @@ const reducer = (state, action) => {
                 username: action.data.username,
                 email: action.data.email
             }
+        case "logout" :
+            console.log("logging Out, Dawg");
+            return {
+                ...state,
+                loggedIn: false,
+                username: "",
+                email: ""
+            }
         default: return state;
     }
 }
 
 const GlobalContextProvider = ({value = [], ...props}) => {
     const [state, dispatch] = useReducer(reducer, {
-      
+        loggedIn: false,
+        username: "",
+        email: ""
     });
 
     return <Provider value = {[state, dispatch]} {...props} />
