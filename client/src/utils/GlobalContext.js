@@ -9,14 +9,18 @@ const reducer = (state, action) => {
         case "checkUser":
             return{
                 ...state,
-                loggedIn: action.loggedIn
+                loggedIn: action.loggedIn,
+                username: action.username,
+                email: action.email,
+                id: action.id
             }
         case "login":
             return{
                 ...state,
                 loggedIn: true,
                 username: action.data.username,
-                email: action.data.email
+                email: action.data.email,
+                id: action.data.id
             }
         case "logout" :
             console.log("logging Out, Dawg");
@@ -24,7 +28,8 @@ const reducer = (state, action) => {
                 ...state,
                 loggedIn: false,
                 username: "",
-                email: ""
+                email: "",
+                id: null
             }
         default: return state;
     }
@@ -34,7 +39,8 @@ const GlobalContextProvider = ({value = [], ...props}) => {
     const [state, dispatch] = useReducer(reducer, {
         loggedIn: false,
         username: "",
-        email: ""
+        email: "",
+        id: null
     });
 
     return <Provider value = {[state, dispatch]} {...props} />

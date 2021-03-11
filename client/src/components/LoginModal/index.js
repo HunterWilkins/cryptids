@@ -22,7 +22,8 @@ function LoginModal(props) {
             console.log(response.data);
             dispatch({type: "login", data: {
                 username: response.data.username,
-                email: response.data.email
+                email: response.data.email,
+                id: response.data.id
             }});
             props.setIsLoginVisible();
 

@@ -13,3 +13,16 @@
     border-radius: 15px;
     align-self: baseline;
 }
+
+#author-cryptids {
+}
+
+#author-cryptids a {
+    padding: 15px;
+    display: block;
+    font-size: 20px;
+}
+
+#author-cryptids :nth-child(2n-1) {
+    background: var(--dark-paper);
+}

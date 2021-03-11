@@ -28,6 +28,16 @@ router.post("/", (req, res) => {
     .then(dbCryptid => {res.json(dbCryptid);})
 });
 
+router.get("/author/:id", (req, res) => {
+    db.Cryptid.findAll({
+        where: {
+            UserId: req.params.id
+        }
+    }).then(dbCryptids => {
+        res.json(dbCryptids);
+    }).catch(err => res.json(err));
+})
+
 router.put("/:id", (req, res) => {
     console.log(req.params.id)
     db.Cryptid.findOne({

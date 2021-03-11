@@ -31,6 +31,10 @@ const API = {
 
     logout: function() {
         return axios.get("/api/users/logout");
+    },
+
+    getAuthorCryptids: function(userId) {
+        return axios.get("/api/cryptid/author/" + userId);
     }
 }
 
