@@ -43,3 +43,13 @@ nav > a.active {
 nav > a:not(:last-child) {
     margin-right: 5px;
 }
+
+@media only screen and (max-width: 610px) {
+    nav > a {
+        flex: initial;
+    }
+
+    nav a[href='/faq'] {
+        padding: 5px 10px;
+    }
+}

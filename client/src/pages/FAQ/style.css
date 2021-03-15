@@ -1,0 +1,38 @@
+#faq {
+    background: var(--light-paper);
+    flex: 1;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.question {
+    width: 50%;
+    padding: 5px;
+    /* border-bottom: rgba(230,230,230,.5) dashed 2px; */
+    /* margin-bottom: 1em; */
+    display: flex;
+    flex-direction: column;
+}
+
+.question hr {
+    border-color: black;
+}
+
+.question p {
+    
+    /* align-self: center; */
+    /* flex: 1; */
+}
+
+@media only screen and (max-width: 600px) {
+    #faq {
+        flex-wrap: nowrap;
+        display: block;
+    }
+
+    .question {
+        width: initial;
+        margin-bottom: 1em;
+    }
+}

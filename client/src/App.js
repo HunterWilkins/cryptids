@@ -7,6 +7,7 @@ import "./style.css";
 import Main from "./pages/Main";
 import Entry from "./pages/Entry";
 import Database from "./pages/Database";
+import FAQ from "./pages/FAQ";
 import Nav from "./components/Nav";
 import Account from "./pages/Account";
 import LoginModal from "./components/LoginModal";
@@ -49,7 +50,7 @@ function App() {
     <Main>
     <Nav isLoggedIn = {user.loggedIn} setIsLoginVisible = {setIsLoginVisible}/>
         <Switch>
-        <Route exact path = "/faq" component = {Entry}/>
+        <Route exact path = "/faq" component = {FAQ}/>
         <Route exact path = "/cryptid/:name" component = {Entry}/>
         <Route exact path = "/database" component = {Database}/>
         <Route exact path = "/account">
@@ -60,7 +61,7 @@ function App() {
         }
         </Route>
         
-        <Route exact path = "/" component = {Entry}/>
+        <Route exact path = "/" component = {FAQ}/>
 
         </Switch>
 

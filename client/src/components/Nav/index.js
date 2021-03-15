@@ -24,7 +24,7 @@ function Nav(props) {
                 <button id = "account-btn" onClick = {() => props.setIsLoginVisible(true)}>Account</button>
             }
         </span>
-        <Link onClick = {() => setPage("faq")} className = {page === "faq" ? "active" : ""} to="/faq">FAQ</Link>
+        <Link onClick = {() => setPage("faq")} className = {page === "faq" || page === "" ? "active" : ""} to="/faq">FAQ</Link>
         <Link onClick = {() => setPage("top")} className = {page === "top" ? "active" : ""} to="/top">Top Cryptids</Link> 
         <Link onClick = {() => setPage("database")} to="/database" className = {page === "database" ? "active" : ""}>Database</Link>
     </nav>
