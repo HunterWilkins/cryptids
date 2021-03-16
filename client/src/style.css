@@ -39,6 +39,7 @@ hr {
     --light-paper: rgb(211, 184, 149);
     --dark-paper: rgb(199, 141, 103);
     --super-dark: rgb(48,21,21);
+    --super-light: rgb(235, 222, 197);
 
     --text-color: white;
 }

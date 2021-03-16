@@ -19,6 +19,10 @@ function FAQ() {
             q: "Are you liable for any posts the users make that might not be strictly legal?",
             a: "Good question! Absolutely not! If you create an account and post here, either follow the rules of posting (and the rules of society), or you'll be entirely liable for your actions."
         },
+        {
+            q: "Who was the handsome, smart, mountain lion of a man who made this site?",
+            a: "Even better question! Hunter Wilkins! If you want to check out more of his stuff, then you can visit https://hunterwilkins.herokuapp.com"
+        },
     ]
     return(
         <div id = "faq">
